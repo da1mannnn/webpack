@@ -35,7 +35,7 @@ import "./styles/style.css";
 
 import baseElement from "./templateElement/base_element.hbs";
 
-import { base } from "./data/hbsData";
+import { base, list } from "./data/hbsData";
 
 const baseMarkUp = baseElement(base);
 
@@ -43,3 +43,7 @@ console.log(baseMarkUp);
 
 const root = document.querySelector("#root");
 root.insertAdjacentHTML("beforeend", baseMarkUp);
+import listElement from "./templateElement/list.hbs";
+const listMarkUp = listElement(list);
+console.log(listMarkUp);
+root.insertAdjacentHTML("beforeend", listMarkUp);
