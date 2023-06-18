@@ -35,7 +35,7 @@ import "./styles/style.css";
 
 import baseElement from "./templateElement/base_element.hbs";
 
-import { base, list } from "./data/hbsData";
+import { base, list, frameworks, libs } from "./data/hbsData";
 
 const baseMarkUp = baseElement(base);
 
@@ -47,3 +47,14 @@ import listElement from "./templateElement/list.hbs";
 const listMarkUp = listElement(list);
 console.log(listMarkUp);
 root.insertAdjacentHTML("beforeend", listMarkUp);
+
+
+import frameworksElement from "./templateElement/frameworks.hbs";
+const frameMarkUp = frameworksElement(frameworks);
+console.log(frameMarkUp);
+root.insertAdjacentHTML('beforeend', frameMarkUp);
+
+
+import libsElement from './templateElement/libs.hbs';
+const libsMarkUp = libsElement(libs);
+root.insertAdjacentHTML('beforeend', libsMarkUp);
